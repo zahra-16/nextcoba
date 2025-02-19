@@ -9,16 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/react": "^2.6.14",
+    "@shadcn/ui": "^0.0.4",
+    "@tanstack/react-query": "^5.66.3",
+    "axios": "^1.7.9",
+    "framer-motion": "^12.4.3",
+    "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-error-boundary": "^5.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^14.0.3",
+    "daisyui": "^4.12.23",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
