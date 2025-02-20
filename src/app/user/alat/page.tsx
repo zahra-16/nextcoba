@@ -34,11 +34,11 @@ export default function AlatList({ kategori_id }) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 min-w-screen gap-6 pt-3 mt-6">
       {alat.map((item) => (
         <Card
           key={item.alat_id}
-          className="relative w-[200px] h-[320px] rounded-3xl overflow-hidden shadow-lg flex flex-col border-2"
+          className="relative w-[190px] h-[320px] rounded-3xl overflow-hidden shadow-lg flex flex-col border-2"
         >
           {/* Gambar */}
           <Image

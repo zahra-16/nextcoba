@@ -29,7 +29,7 @@ export default function CategoryCard() {
   };
 
   return (
-    <div id="section1" className="container mx-auto p-6 bg-green-50 min-h-screen my-20">
+    <div id="section1" className="container mx-auto p-6 min-h-screen my-20">
       <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
         Pilih Kategori Alat
       </h1>
@@ -69,7 +69,7 @@ export default function CategoryCard() {
 
       {/* Bagian Alat */}
       {selectedCategory && (
-        <div className="mt-10 p-6 bg-white shadow-xl rounded-xl">
+        <div className="mt-10 p-6 bg-white">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 text-left">
             Daftar Alat
           </h2>

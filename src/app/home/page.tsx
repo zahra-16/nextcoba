@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Card, CardFooter, Image } from "@heroui/react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";  
 
@@ -80,13 +81,18 @@ export default function HomePage() {
 
 
   return (
-    <div id="section1" className="p-6 w-full flex flex-col items-center pt-25 min-h-screen my-20">
+    <div id="section1" className="p-4 w-full flex flex-col items-center pt-28">
       {/* Hero Section */}
-      <div className="relative w-full max-w-7xl h-[400px] flex items-center justify-center text-center text-white bg-cover bg-center rounded-xl shadow-xl overflow-hidden" style={{ backgroundImage: "url('/mountain.jpeg')" }}>
-        <div className="absolute inset-0 bg-black/10 backdrop-blur-md rounded-xl"></div>
+      <div  className="relative w-full h-[400px] text-black flex flex-col items-center justify-center text-center p-6 rounded-xl shadow-xl bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: "url('/mountainback.jpg')" }}>
+        <div className="absolute inset-0 bg-black/10 rounded-xl"></div>
         <div className="relative z-10 px-6 max-w-3xl">
-          <h1 className="text-5xl font-bold leading-tight drop-shadow-lg">Sewa Barang Mudah & Cepat</h1>
-          <p className="text-lg mt-3 drop-shadow-md">Temukan berbagai barang untuk disewa sesuai kebutuhan Anda!</p>
+        <h1 className="text-4xl font-bold mb-2 text-white">
+          Sewa Barang Mudah & Cepat
+        </h1>
+        <p className="text-lg mb-4 text-white">
+          Temukan berbagai barang untuk disewa sesuai kebutuhan Anda!
+        </p>
           <div className="mt-6 flex justify-center space-x-4">
             <button id="portal" onClick={showPortalNotification} className="bg-green-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-green-700 transition-all">Selamat Datang</button>
             <button id="error" onClick={throwError} className="bg-red-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-red-700 transition-all">Throw Error</button>
@@ -96,7 +102,7 @@ export default function HomePage() {
 
       {/* Product Section */}
       <div className="mt-16 my-20 w-full max-w-7xl">
-        <h2 className="text-center text-3xl font-semibold mb-8">Choose from our <span className='text-green-700 font-semibold italic'>curated plant</span> collections</h2>
+        <h2 className="text-center text-3xl font-semibold mb-8">Choose from our{" "}<span className='text-green-700 font-semibold italic'>collection</span>  of categories</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {plants.map((plant) => (
             <div key={plant.id} className="relative bg-white p-5 rounded-xl shadow-md text-center border border-gray-100 hover:shadow-xl transition transform hover:scale-105">
@@ -124,6 +130,14 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+
+      <Link href={`/user`}>
+        <div className="pt-10 justify-end">
+          <Button className="bg-[#A27B5C] hover:bg-[#DCD7C9] p-3 text-white rounded-md hover:text-black">
+            Selengkapnya
+          </Button>
+        </div>
+      </Link>
 
       {/* Rental Products */}
       <div className="grid grid-cols-4 gap-9 mt-6 pb-8">
